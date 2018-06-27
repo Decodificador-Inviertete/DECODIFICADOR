@@ -1,3 +1,25 @@
+#Funciones
+def codificar(f):
+    letras = {'s':'a','u':'b','i':'c','l':'i'}
+    frasec = ''
+    l = len(f)
+    for j in range(0,l):
+        for letra in letras:
+            if f[j] == letra:
+                frasec += letras[letra]
+    print("LA FRASE CODIFICADA ES: ",frasec,"\n")
+        
+'''def codificar(f):
+    letras = {'s':'a','u':'b','i':'c','l':'i'}
+    frasec = ''
+    l = len(f)
+    for j in range(0,l):
+        for letra in letras:
+            if f[j] == letra:
+                frasec += letras[letra]
+    print("LA FRASE CODIFICADA ES: ",frasec,"\n")
+    '''
+#MENU
 '''Proyecto DECODIFICADOR
         CABEZERA'''
 
@@ -12,15 +34,14 @@ while opc != 0:
     print("0.- SALIR")
     opc = int(input("INGRESA LA OPCION QUE QUIERES REALIZAR: "))
     if opc == 1:
-        print("\n")
-        print("codificando")
+        f = input("\n Ingresa una frase: ")
+        codificar(f)
     elif opc ==2:
-        print("\n")
-        print("decodificando")
+        f = input("\n Ingresa una frase: ")
+        print("DECODIFICADO")
+        decodificar(f)
     elif opc == 0:
-        #exit()
-        print("\n")
-        print("Saliendo")
+        exit()
     else:
         print("\n")
-        print("Ingresa un numero valido")
+        print("Ingresa una opción valida")
