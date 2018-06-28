@@ -2,27 +2,29 @@
 def codificar(f):
     letras = {'s':'a','u':'b','i':'c','l':'i'}
     frasec = ''
-    l = len(f)
-    for j in range(0,l):
-        for letra in letras:
-            if f[j] == letra:
-                frasec += letras[letra]
-    print("LA FRASE CODIFICADA ES: ",frasec,"\n")
+    for l in f:
+        if l == ' ':
+            frasec += ' '
+        else:
+            for letra in letras:
+                if l == letra:
+                    frasec += letras[letra]
+    print("LA FRASE CODIFICADA ES:",frasec,"\n")
         
-'''def codificar(f):
+def decodificar(f):
     letras = {'s':'a','u':'b','i':'c','l':'i'}
     frasec = ''
-    l = len(f)
-    for j in range(0,l):
-        for letra in letras:
-            if f[j] == letra:
-                frasec += letras[letra]
-    print("LA FRASE CODIFICADA ES: ",frasec,"\n")
-    '''
-#MENU
-'''Proyecto DECODIFICADOR
-        CABEZERA'''
+    for l in f:
+        if l == ' ':
+            frasec += ' '
+        else:
+            for letra in letras:
+                if l == letra:
+                    frasec += letras[letra]
+    print("LA FRASE CODIFICADA ES:",frasec,"\n")
 
+#MENU
+     
 print("**********************************")
 print("*        DECODIFICADOR           *")
 print("**********************************\n")
@@ -32,15 +34,14 @@ while opc != 0:
     print("1.- CODIFICAR")
     print("2.- DECODIFICAR")
     print("0.- SALIR")
-    opc = int(input("INGRESA LA OPCION QUE QUIERES REALIZAR: "))
-    if opc == 1:
-        f = input("\n Ingresa una frase: ")
-        codificar(f)
-    elif opc ==2:
-        f = input("\n Ingresa una frase: ")
-        print("DECODIFICADO")
-        decodificar(f)
-    elif opc == 0:
+    opc = input("INGRESA LA OPCION QUE QUIERES REALIZAR: ")
+    if opc == '1':
+        fr = input("\n Ingresa una frase: ")
+        codificar(fr)
+    elif opc =='2':
+        fr = input("\n Ingresa una frase: ")
+        decodificar(fr)
+    elif opc == '0':
         exit()
     else:
         print("\n")
